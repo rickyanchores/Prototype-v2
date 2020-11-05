@@ -1,0 +1,10 @@
+#logo{
+    color: $logoColor;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    h1{
+        margin-left: 10%;
+        font-size: 3em;
+    }
+}

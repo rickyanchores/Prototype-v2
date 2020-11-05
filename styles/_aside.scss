@@ -1,0 +1,15 @@
+#aside{
+    background-color: $bgColor;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#aside img{
+    height: 100%;
+    width: 100%;
+    z-index: 1;
+    background-size: cover;
+}
+#aside h1{
+    z-index: 2;
+}

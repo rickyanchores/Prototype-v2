@@ -1,0 +1,32 @@
+/* GRID */
+.grid-container{
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 10% 75% 5%;
+    grid-template-areas: "logo logo pin nav"
+                         "main main aside aside"
+                         "main main aside aside"
+                         "footer footer footer footer";
+}
+#logo{
+    grid-area: logo;
+}
+#navbar{
+    grid-area: nav;
+}
+#pin{
+    grid-area: pin;
+}
+
+#main{
+    grid-area: main;
+}
+#aside{
+
+    grid-area: aside;
+}
+#footer{
+    grid-area: footer;
+}
+

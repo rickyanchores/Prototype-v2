@@ -1,0 +1,61 @@
+/* Color SET*/
+
+$bgColor: #2F2E31;
+$logoColor: #707070;
+$txtColor: #949396;
+$mainColor: #99989B;
+
+
+/* IMPORT */
+@import './gridset';
+@import './logo';
+@import './nav';
+@import './pin';
+@import './main';
+@import './aside';
+@import './footer';
+@import './mediaquery';
+
+
+/* MIXIN */
+@mixin toCenter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* General STYLE */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background: $bgColor;
+    color: whitesmoke;
+    line-height: 1.6;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    margin: 0;
+}
+
+
+
+/* CONTACTS */
+
+#form {
+
+    @include toCenter();
+
+
+    background: whitesmoke;
+    color: $bgColor;
+    border: none;
+    height: 50vh;
+    width: 50%;
+    border-radius: 30px;
+    position: relative;
+    
+}
+
+

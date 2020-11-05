@@ -1,0 +1,32 @@
+/* NAV */
+
+#navbar {
+    background: $bgColor;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    font-weight: bold;;
+    ul{
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    li{
+        display: inline-block;
+        margin: 20px;
+    }
+    a{
+        color: $logoColor;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 20px;
+    }
+    a.active{
+        color: #fff;
+    }
+    a:hover{
+        border-bottom: 2px solid #fff;
+    }
+}
+

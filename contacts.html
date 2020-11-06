@@ -23,10 +23,33 @@
         </div>
 
         <section id="main">
-            <form id="form" action="">
-                <h1>Contact us</h1>
+            <form action="/">
+                <div>
+                    <label for="firstname">First Name</label>
+                    <input id="name" name="name" type="text" required>
+                </div>
+
+                <div>
+                    <label for="lastname">Last Name</label>
+                    <input id="lastname" name="lastname" type="text" required>
+                </div>
+
+                <div>
+                    <label for="email">Email</label>
+                    <input id="email" name="email" type="text" required>
+                </div>
+
+                <div>
+                    <label for="UploadCV">Upload your Design : ("PDF, JPEG, JPG")</label>
+                    <input type="file">
+                </div>
+
+                <textarea name="textarea" id="textarea" cols="30" rows="10"></textarea>
+
+                <button type="button">Submit</button>
             </form>
         </section>
+
         <section id="aside">
             <img src="./images/aside.jpeg" alt="">
         </section>

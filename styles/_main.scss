@@ -3,5 +3,93 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 }
+
+//DEFAULT OPACITY 0
+#main h1{
+    opacity: 0;
+}
+
+#main span{
+    position: absolute;
+    bottom: -1rem;
+    font-size: 60px;
+    text-transform: uppercase;
+}
+
+#main span:nth-of-type(1){
+    left: 4rem;
+    animation: rotate 2s infinite, levitate 10s infinite, colorFull 5s infinite;
+}
+#main span:nth-of-type(2){
+    left: 10rem;
+    animation: rotate 2s infinite, levitate 4s infinite, colorFull 5s infinite;
+    animation-delay: .5s;
+}
+#main span:nth-of-type(3){
+    left: 20rem;
+    animation: rotate 2s infinite, levitate 12s infinite, colorFull 5s infinite;
+    animation-delay: 1.5s;
+}
+#main span:nth-of-type(4){
+    left: 28rem;
+    animation: rotate 2s infinite, levitate 5s infinite, colorFull 5s infinite;
+    animation-delay: 2.5s;
+}
+#main span:nth-of-type(5){
+    left: 35rem;
+    animation: rotate 2s infinite, levitate 14s infinite, colorFull 5s infinite;
+    animation-delay: 3.5s;
+}
+
+
+
+// @mixin animationR {
+//     @keyframes rotate{
+//         0%{}
+//         100%{
+//             rotate: -360deg;
+//             transition: rotate 2s linear;
+//         }
+//     }
+    
+//     @keyframes levitate{
+//         0%{}
+//         100%{
+//             margin-bottom: 100vh;
+//         }
+//     }
+    
+//     @keyframes colorFull{
+//         0%{color: red;}
+//         33%{color: green;}
+//         66%{color: blue;}
+//         100%{color:yellow;}
+//     }
+    
+// }
+
+@keyframes rotate{
+    0%{}
+    100%{
+        rotate: -360deg;
+        transition: rotate 2s linear;
+    }
+}
+
+@keyframes levitate{
+    0%{}
+    100%{
+        margin-bottom: 100vh;
+    }
+}
+
+@keyframes colorFull{
+    0%{color: red;}
+    33%{color: green;}
+    66%{color: blue;}
+    100%{color:yellow;}
+}
+
 

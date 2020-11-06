@@ -9,7 +9,7 @@
       grid-template-columns: 1fr 1fr 1fr 1fr;
   -ms-grid-rows: 10% 75% 5%;
       grid-template-rows: 10% 75% 5%;
-      grid-template-areas: "logo logo pin nav" "main main aside aside" "main main aside aside" "footer footer footer footer";
+      grid-template-areas: "logo logo pin nav" "main main aside aside" "main main aside aside" "footer footer footer footer";
 }
 
 #logo {
@@ -65,6 +65,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 #logo h1 {
@@ -136,6 +137,122 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
+}
+
+#main h1 {
+  opacity: 0;
+}
+
+#main span {
+  position: absolute;
+  bottom: -1rem;
+  font-size: 60px;
+  text-transform: uppercase;
+}
+
+#main span:nth-of-type(1) {
+  left: 4rem;
+  -webkit-animation: rotate 2s infinite, levitate 10s infinite, colorFull 5s infinite;
+          animation: rotate 2s infinite, levitate 10s infinite, colorFull 5s infinite;
+}
+
+#main span:nth-of-type(2) {
+  left: 10rem;
+  -webkit-animation: rotate 2s infinite, levitate 4s infinite, colorFull 5s infinite;
+          animation: rotate 2s infinite, levitate 4s infinite, colorFull 5s infinite;
+  -webkit-animation-delay: .5s;
+          animation-delay: .5s;
+}
+
+#main span:nth-of-type(3) {
+  left: 20rem;
+  -webkit-animation: rotate 2s infinite, levitate 12s infinite, colorFull 5s infinite;
+          animation: rotate 2s infinite, levitate 12s infinite, colorFull 5s infinite;
+  -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
+}
+
+#main span:nth-of-type(4) {
+  left: 28rem;
+  -webkit-animation: rotate 2s infinite, levitate 5s infinite, colorFull 5s infinite;
+          animation: rotate 2s infinite, levitate 5s infinite, colorFull 5s infinite;
+  -webkit-animation-delay: 2.5s;
+          animation-delay: 2.5s;
+}
+
+#main span:nth-of-type(5) {
+  left: 35rem;
+  -webkit-animation: rotate 2s infinite, levitate 14s infinite, colorFull 5s infinite;
+          animation: rotate 2s infinite, levitate 14s infinite, colorFull 5s infinite;
+  -webkit-animation-delay: 3.5s;
+          animation-delay: 3.5s;
+}
+
+@-webkit-keyframes rotate {
+  0% {
+  }
+  100% {
+    rotate: -360deg;
+    -webkit-transition: rotate 2s linear;
+    transition: rotate 2s linear;
+  }
+}
+
+@keyframes rotate {
+  0% {
+  }
+  100% {
+    rotate: -360deg;
+    -webkit-transition: rotate 2s linear;
+    transition: rotate 2s linear;
+  }
+}
+
+@-webkit-keyframes levitate {
+  0% {
+  }
+  100% {
+    margin-bottom: 100vh;
+  }
+}
+
+@keyframes levitate {
+  0% {
+  }
+  100% {
+    margin-bottom: 100vh;
+  }
+}
+
+@-webkit-keyframes colorFull {
+  0% {
+    color: red;
+  }
+  33% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  100% {
+    color: yellow;
+  }
+}
+
+@keyframes colorFull {
+  0% {
+    color: red;
+  }
+  33% {
+    color: green;
+  }
+  66% {
+    color: blue;
+  }
+  100% {
+    color: yellow;
+  }
 }
 
 #aside {
@@ -174,6 +291,7 @@ footer {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  z-index: 10;
 }
 
 @media (max-width: 896px) {
@@ -186,7 +304,7 @@ footer {
         grid-template-columns: 1fr;
     -ms-grid-rows: 1fr 1fr 1fr 1fr 30vh 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr 30vh 1fr;
-        grid-template-areas: "logo" "nav" "aside" "pin" "main" "footer";
+        grid-template-areas: "logo" "nav" "aside" "pin" "main" "footer";
   }
   #logo {
     -ms-grid-row: 1;
